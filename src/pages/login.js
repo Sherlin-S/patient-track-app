@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import LoginMessage from "../components/LoginMessage";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
