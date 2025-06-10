@@ -1,3 +1,4 @@
+// pages/index.js or app/page.js
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -32,18 +33,22 @@ export default function Home() {
         </nav>
       </header>
 
-      <section id="home" className="text-center py-20 bg-gray-50">
+      {/* Home Section */}
+      <section id="home" className="text-center py-20 bg-gradient-to-b from-blue-400 to-white">
         <h1 className="text-4xl font-bold mb-4">Welcome to PatientTrack</h1>
         <p className="text-lg mb-6">
           Streamline hospital operations with real-time patient flow and status tracking.
         </p>
         <a href="#features">
+
+          <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700 transition"></button>
           <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-300">
             Explore Features
           </button>
         </a>
       </section>
 
+      {/* About Section */}
       <section id="about" className="py-16 px-4 max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-semibold mb-4">About PatientTrack</h2>
         <p className="text-lg">
@@ -51,6 +56,7 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Features Section */}
       <section id="features" className="py-16 bg-gray-100">
         <h2 className="text-3xl text-center font-semibold mb-10">Key Features</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
@@ -90,11 +96,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Login Call-to-Action */}
       <section id="login" className="py-20 text-center">
         <h2 className="text-3xl font-semibold mb-4">Access Your Account</h2>
         <p className="text-lg mb-6">Log in to manage patient flow or register new patients to get started!</p>
         <a href="/login">
-          <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
             Login
           </button>
         </a>
@@ -104,8 +111,17 @@ export default function Home() {
         <p>© 2025 PatientTrack. Built with care for better care.</p>
       </footer>
 
-      {/* ✅ Internal CSS */}
+      {/* Internal CSS using JSX style */}
       <style jsx>{`
+        .feature-image {
+          border-radius: 0.5rem;
+          object-fit: cover;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+        }
+        .feature-image:hover {
+          transform: scale(1.05);
+        }
         .logo img {
           height: 48px;
         }
